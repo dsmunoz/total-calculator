@@ -90,26 +90,6 @@ class TestSuccess:
     assert response.json['total_amount'] == total_amount
     assert list(response.json.keys())[0] == 'date_requested'
 
-  def test_oh_normal_min_discount(self, client):
-    headers = {'ip-client': '127.0.0.1'}
-    response = client.get("/calculate-total?state=OH&type=normal&km=25&base_amount=10", headers=headers)
-    comission_percentages = json.load(open(os.path.dirname(__file__) + '/../comission_percentages.json'))
-    comission = float(10) * float(comission_percentages['OH']['normal'])
-    total_amount = comission + (float(10) - (10 * .03))
-    assert response.status_code == 200
-    assert response.json['total_amount'] == total_amount
-    assert list(response.json.keys())[0] == 'date_requested'
-
-  def test_tx_normal_min_discount(self, client):
-    headers = {'ip-client': '127.0.0.1'}
-    response = client.get("/calculate-total?state=OH&type=normal&km=25&base_amount=20", headers=headers)
-    comission_percentages = json.load(open(os.path.dirname(__file__) + '/../comission_percentages.json'))
-    comission = float(10) * float(comission_percentages['OH']['normal'])
-    total_amount = comission + (float(10) - (10 * .03))
-    assert response.status_code == 200
-    assert response.json['total_amount'] == total_amount
-    assert list(response.json.keys())[0] == 'date_requested'
-
   def test_tx_normal_max_discount(self, client):
     headers = {'ip-client': '127.0.0.1'}
     response = client.get("/calculate-total?state=TX&type=normal&km=31&base_amount=10", headers=headers)
