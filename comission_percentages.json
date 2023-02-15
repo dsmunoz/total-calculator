@@ -1,0 +1,61 @@
+{
+  "NY": {
+    "premium": ".35",
+    "normal": ".25",
+    "iva": ".21",
+    "base_discount": "N/A",
+    "total_discount": "N/A"
+  },
+  "CA": {
+    "premium": ".33",
+    "normal": ".23",
+    "iva": "0",
+    "base_discount": "N/A",
+    "total_discount": {
+      ">": 26,
+      "discount": ".05"
+    }
+  },
+  "AZ": {
+    "premium": ".30",
+    "normal": ".20",
+    "iva": "0",
+    "base_discount": "N/A",
+    "total_discount":{
+        ">": "26",
+        "discount": ".05"
+    }
+  },
+  "TX": {
+    "premium": ".28",
+    "normal": ".18",
+    "iva": "0",
+    "base_discount":{
+        "between": [
+          "20",
+          "30"
+        ],
+        "discount": ".03"
+    },
+    "total_discount":{
+        ">": "30",
+        "discount": ".05"
+    }
+  },
+  "OH": {
+    "premium": ".25",
+    "normal": ".15",
+    "iva": "0",
+    "base_discount":{
+        "between": [
+          "20",
+          "30"
+        ],
+        "discount": ".03"
+    },
+    "total_discount":{
+        ">": "30",
+        "discount": ".05"
+    }
+  }
+}
