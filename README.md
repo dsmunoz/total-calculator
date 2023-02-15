@@ -2,12 +2,12 @@
 
 This project calculates some comisions and discounts based on some bussiness rules
 
-##Requirements
+## Requirements
  
 - python3.9 
 - pip https://pip.pypa.io/en/stable/
 - venv https://docs.python.org/3/library/venv.html
-##Running local server
+## Running local server
 
 1. Install virtualenv (if you don't have it installed already)
 ```bash
@@ -28,14 +28,14 @@ $ flask run
 
 Now you should be able to make request to http://127.0.0.1:5000
 
-##Running tests
+## Running tests
 
 Within venv and root folder:
 ```bash
 $ pytest
 ```
 
-##Usage
+## Usage
 
 There is only one route defined: 
 1. `calculate-total`. 
@@ -52,7 +52,7 @@ call route example:
 http://127.0.0.1:5000/calculate-total?state=OH&type=premium&km=30.1&base_amount=20.4
 ```
 
-###Structure
+### Structure
 
 This projects is based in three main parts:
 1. Validations: There is a file within services called `validator.py` which is in charge of making sure that
